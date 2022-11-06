@@ -7,12 +7,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/operation")
+@RestController
 public class Controller {
     @Autowired
     OperatorService service;
 
-    @PostMapping(path = "/operation", consumes = MediaType.APPLICATION_JSON_VALUE,
+    @PostMapping(path = "/", consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<ModelResponse> postOperation(@RequestBody ModelRequest request) {
         Integer result = service.checkType(request);
