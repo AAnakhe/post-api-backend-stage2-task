@@ -7,7 +7,7 @@ public class OperatorService {
 
     public Integer checkType(ModelRequest model) {
         Integer result;
-        var operation_type = model.getOperation_type();
+        Operator operation_type = model.getOperation_type();
 
         if (operation_type.equals(Operator.addition)) {
             Operator operation = Operator.addition;
